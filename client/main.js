@@ -1,14 +1,22 @@
-// this is client.
+// // this is client.
 
-const rvUser = new ReactiveVar([])
+// const rvUser = new ReactiveVar([])
 
-Meteor.call('getUsers', function(err, rslt){
-    console.log(rslt);
-})
+// Meteor.call('getUsers', function(err, rslt){
+//     console.log(rslt);
+// })
+
+// Template.main.helpers({
+//     users: function() {
+
+//     }
+// });
+
+
+Posts = new Mongo.Collection('posts');
 
 Template.main.helpers({
-    users: function() {
-
+    posts: function() {
+        return Posts.find().fetch()
     }
-});
-
+    });

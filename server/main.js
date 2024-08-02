@@ -6,29 +6,33 @@
 //디비 관련 find insert remove update 4개만 알면됨
 
 
-Users = new Mongo.Collection('users');
+Posts = new Mongo.Collection('posts');
 
-console.log(Users.find().fetch())
+console.log(Posts.find().fetch())
 
-if (Users.find().count() == 0) {
+if (Posts.find().count() == 0) {
  console.log('데이터생성중');
   const data = [
-    {                
-      name: '홍길동',
-      age: 10,
-      address: '가나다시'
-}, {
-      name: '김철수',
-      age: 11,
-      address: '라마바시'
-}, {
-      name: '이영희',
-      age: 12,
-      address: '사아자시'
-}
-];
+    {     
+      createdAt: new Date(),
+      title: '1번 테스트 제목입니당.',
+      content: '이게 게시판 내용임다.'
+    },
+    {     
+      createdAt: new Date(),
+      title: '2번 테스트 제목입니당.',
+      content: '이게 게시판 내용임다.'
+      
+    },
+   {     
+    createdAt: new Date(),
+    title: '3번 테스트 제목입니당.',
+    content: '이게 게시판 내용임다.'
+    
+  } 
+] ;
 
   data.forEach(function(item) {
-    Users.insert(item);
+    Posts.insert(item);
   });
 }
