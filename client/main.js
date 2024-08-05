@@ -12,6 +12,13 @@
 //     }
 // });
 
+FlowRouter.route('/', {
+    action: function(){
+        BlazeLayout.render('layout', {main: 'main'});
+    }
+})
+
+
 
 Posts = new Mongo.Collection('posts');
 
