@@ -18,8 +18,6 @@ FlowRouter.route('/', {
     }
 })
 
-
-
 Posts = new Mongo.Collection('posts');
 
 Template.main.helpers({

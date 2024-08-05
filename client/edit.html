@@ -1,0 +1,18 @@
+<template name="edit">
+    <div>
+        <label for="title"> edit 페이지입니다. 수정하세요 😎</label>
+   
+        <div>
+            <label for="title">Title : </label>         
+            <input id="title" type="text" value="{{post.title}}">
+            </div>
+        <div>
+            <label for="content">Content : </label>
+            <textarea name="content" id="content" rows="10" value="{{post.content}}"></textarea>
+        </div>
+        <div>
+            <button id="save" type="submit">edit😎</button>
+        </div>
+
+        </div>
+    </template>

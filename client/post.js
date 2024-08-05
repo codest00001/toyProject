@@ -17,6 +17,18 @@ Template.post.events({
         const content = $('#content').val()
         
         // 3. 가져온 데이터를 json으로 DB에 저장
+    //     if(title.length <= 0){
+    //         return  alert('제목을 입력해주세요');
+    // }
+
+    //    if(content.length <= 0){
+    //         return alert('내용을 입력해주세요');
+    // }
+
+    if(title.length <= 0 || content.length <= 0){
+        return  alert('제목/내용을 입력해주세요');
+        }
+
         const json = {
             title : title,
             content : content,
@@ -28,7 +40,6 @@ Template.post.events({
 
         // 4. 다시 목록화면(home)으로 돌아감
         FlowRouter.go('/');
-
-     alert('Save 되었습니당 😎');    }
+    }
 })
 
