@@ -27,7 +27,7 @@ Template.detail.events({
         } else {
             //삭제안함을 선택한 경우
             return;
-        }
+                }
 
         //이전 목록으로 돌아간다.
         FlowRouter.go('/');
