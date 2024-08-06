@@ -18,7 +18,7 @@ Template.edit.events({
     'click #save': function(event){
         const postId = FlowRouter.getParam('postId');
         const title = $('#title').val()
-            const content = $('#content').val()
+        const content = $('#content').val()
         
     if(title.length <= 0 || content.length <= 0){
         return  alert('제목/내용을 입력해주세요');

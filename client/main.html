@@ -1,8 +1,11 @@
 
 <template name="main">
+
+   <!-- {{#each post in posts}} 주석으로 교체해도 됨 -->
    {{#each posts}}
   <article>
       <div>
+    <!-- <a href="/detail/{{post._id}}">{{post.title}}</a>  -->
     <a href="/detail/{{_id}}">{{title}}</a> 
   </div>
   </article>

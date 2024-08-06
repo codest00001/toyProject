@@ -1,7 +1,10 @@
+<!-- detail이란 이름은 우리가 정한 것. b로 해도 됨 -->
 <template name="detail">
     <div>
+        <!-- post는 우리가 정해준 것. a로 해도됨 -->
         <h1>{{post.title}}</h1>
         <p>{{post.content}}</p>
         <a href="/edit/{{post._id}}">Edit</a>
+        <a href="#" id="remove">Remove</a>
     </div>
 </template>
